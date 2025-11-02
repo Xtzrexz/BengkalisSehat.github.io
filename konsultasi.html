@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Klinik Dokter</title>
+    <link rel="icon" href="asset/logo.jfif" class="rounded" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar bg-success fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="index.html"><img src="asset/bks.png" width="50" rounded alt="Logo Bengkalis">Bengkalis Sehat</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="asset/pks.png" width="40" rounded alt="Logo Puskesmas" class="m-1">Bengkalis Sehat</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              
+              <li class="nav-item">
+                <a class="nav-link active text-success" href="https://www.klikdokter.com/obat" target="_blank"><i class="bi bi-capsule m-1"></i>Info Obat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-success" href="https://www.klikdokter.com/penyakit" target="_blank"><i class="bi bi-lungs-fill m-1"></i>Info Penyakit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-success" href="lokasi dokter.html"><i class="bi bi-people m-1"></i>Lokasi Klinik Dokter Di Sekitar</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+    <!-- Beranda -->
+     <section id="home" class="container text-center py-5 mt-5">
+      <!-- Deretan Icon -->
+      <div class="row justify-content-center gy-4">
+        <!-- Item 1 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+            <a href="index.html"><img src="asset/Info stem Cell.png" alt="Stem Cell" width="60"></a>
+          </div>
+          <p class=" mb-1 fw-semibold">Info</p>
+          <small class="text-muted">Stem Cell</small>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+            <a href="https://www.klikdokter.com/obat" target="_blank"><img src="asset/InfoObat.png" alt="Obat" width="60"></a>
+          </div>
+          <p class="mb-1 fw-semibold">Info</p>
+          <small class="text-muted">Obat</small>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+            <a href="https://www.klikdokter.com/penyakit" target="_blank"><img src="asset/InfoPenyakit.png" alt="Penyakit" width="60"></a>
+          </div>
+          <p class="mb-1 fw-semibold">Info</p>
+          <small class="text-muted">Penyakit</small>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+            <a href="konsultasi.html"><img src="asset/JagaJantung.png" alt="konsultasi" width="60"></a>
+          </div>
+          <p class="mb-1 fw-semibold">Konsultasi</p>
+        </div>
+      </div>
+     </section>
+    <!-- End Beranda -->
+
+    <!-- Content Konsultasi -->
+     <div class="jumbotron jumbotron-fluid bg-transparent" style="margin-top: 4%;">
+        <div class="container">
+            <div class="row align-items-center my-5">
+              <div class="col-lg-5">
+                <img class="img-fluid" src="asset/konsul.webp" alt="image">
+              </div>
+              <div class="col-lg-7 ">
+                <h1 class="font-weight-bold text-center text-success mt-3"><i class="fa fa-mobile-phone mr-1"></i>Ayo Konsultasi Di Bengkalis Sehat</h1>
+          <p class="text-center">Selamat Datang Di Website Bengkalis Sehat Disini Kita Bisa Konsultasi Lewat Smartphone dan Perangkat Lainnya Dengan Mudah</p>
+
+                  <!-- Button trigger modal -->
+                    <center><button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+                      <i class="fa fa-user mr-2"></i>Konsultasi Sekarang
+                    </button></center>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Daftar</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                              <strong>Terkirim!</strong> Silahkan cek pesan Email anda
+                              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                           <form name="form-konsultasi">
+                               <div class="form-group">
+                                  <label for="nik"><i class="fa fa-user mr-2 text-warning"></i>Nik:</label>
+                                  <input type="text" class="form-control"  id="nik" name="nik" required="" placeholder="Masukkan NIK">
+                                </div>
+
+                              <div class="form-group">
+                                <label for="nama"><i class="fa fa-at mr-2 text-danger"></i>Nama Lengkap:</label>
+                                <input type="text" class="form-control"  id="nama" name="nama" required="" placeholder="Masukkan Nama Lengkap">
+                              </div>
+                              <div class="form-group">
+                              <div class="custom-control custom-radio">
+                              <input type="radio" id="customRadio1" name="jenis_kelamin" class="custom-control-input" value="laki_laki">
+                                  <label class="custom-control-label" for="customRadio1">Laki-Laki</label>
+                              </div>
+                              </div>
+                              <div class="form-group">
+                              <div class="custom-control custom-radio">
+                              <input type="radio" id="custumRadio2" name="jenis_kelamin" class="custom-control-input" value="perempuan">
+                                  <label class="custom-control-label" for="custumRadio2">Perempuan</label>
+                              </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="umur"><i class="fa fa-child mr-2 text-info"></i>Umur :</label>
+                              <input type="number" class="form-control"  id="umur" name="umur" required="">
+                              </div>
+
+                              <div class="form-group">
+                                <label for="no_hp"><i class="fa fa-mobile-phone mr-2 text-secondary"></i>Nomor Handphone :</label>
+                                <input type="number" class="form-control"  id="no_hp" name="no_hp" required="" placeholder="+62**">
+                              </div>
+
+                              <div class="form-group">
+                                <label for="alamat lengkap"><i class="fa fa-map mr-2"></i>Alamat Lengkap :</label>
+                                <input type="text" class="form-control"  id="alamat lengkap" name="alamat_lengkap" required="">
+                              </div>
+                              <div class="form-group">
+                                <div class="custom-control custom-switch">
+                                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                  <label class="custom-control-label" for="customSwitch1">Remember Me</label>
+                                </div>
+                              </div>
+                              <button type="submit" class="btn btn-success btn-kirim" name="daftar">Submit</button>
+                              <button class="btn btn-success btn-loading d-none" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Loading...
+                              </button>
+                              <button type="reset" class="btn btn-outline-danger">Reset</button>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    <!-- End Content Konsultasi -->
+
+
+     <!-- Tombol Kembali ke Atas -->
+    <button type="button"class="btn btn-success btn-lg rounded-circle position-fixed" id="btnBackToTop" style="bottom: 10px; right: 10px; display: none; z-index: 1000;"> <i class="bi bi-arrow-bar-up"></i></button>
+    <!-- Footer -->
+      <footer class="bg-light pt-5 pb-3 mt-5 border-top">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img src="asset/bks.png" alt="Logo" class="mb-3" style="max-width:70px;"><b class="ms-0" >BENGKALIS SEHAT</b>
+
+        <h5>Jaga Sehatmu<br>Konsultasi Lewat Smartphone</h5>
+        <p>Website jaga kesehatan dengan beragam layanan dan informasi terpercaya,
+          agar hidup lebih nyaman.</p>
+
+        <p class="fw-semibold">Tetap Terhubung dengan Kami</p>
+        <div class="d-flex gap-3">
+          <a href="https://www.instagram.com/xtzrexz" target="_blank"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="https://www.facebook.com/trreexz" target="_blank"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="https://www.tiktok.com/@rezkirexz?_" target="_blank"><i class="bi bi-tiktok fs-4"></i></a>
+        </div>
+
+        <div class="mt-4">
+          <p class="mb-1">Bagian dari:</p>
+          <img src="asset/kalbe.png" alt="KALBE" style="max-width:120px;">
+        </div>
+      </div>
+
+      <!-- MENU 1 -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold">Lebih Dekat</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://rsudbengkalis.bengkaliskab.go.id/jadwal-pelayanan-poliklinik" target="_blank" class="text-decoration-none text-dark">Tentang Bengkalis Sehat</a></li>
+          <li><a href="https://whatsapp.com/dl/083140422794" target="_blank" class="text-decoration-none text-dark">Hubungi Kami</a></li>
+        </ul>
+      </div>
+
+      <!-- MENU 2 -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold">Layanan</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://www.klikdokter.com/obat" class="text-decoration-none text-dark">Info Obat</a></li>
+          <li><a href="https://www.klikdokter.com/penyakit" class="text-decoration-none text-dark">Info Penyakit</a></li>
+        </ul>
+      </div>
+
+      <!-- MENU 3 -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold">Kolaborasi Bengkalis Sehat X Klik Dokter</h6>
+        <p class="fw-semibold mb-1">Korporasi</p>
+        <p class="small">Mitra Perusahaan Pemilik Produk</p>
+
+        <p class="fw-semibold mb-1 mt-3">Tenaga Kesehatan</p>
+        <p class="small">Dokter, Apoteker, Bidan, Perawat</p>
+
+        <p class="fw-semibold mb-1 mt-3">Fasilitas Kesehatan</p>
+        <p class="small">Rumah Sakit, Klinik, Apotek</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <p class="mb-0">Copyright © 2025 Bengkalis Sehat </p>
+      <div class="text-end">
+        <p class="mb-1">Mitra Resmi dari:</p>
+        <img src="asset/kemenkes.png" alt="Kemenkes" style="max-width:160px;">
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>
+      // Ambil tombolnya
+      const btn = document.getElementById("btnBackToTop");
+
+      // Tampilkan tombol jika scroll lebih dari 200px
+      window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      };
+
+      // Scroll ke atas saat tombol diklik
+      btn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzT2rM8IG7T9mz_Chzv5CPWnW_0BWPN43xx0cx3NV2lC3AU6ShSEjfFdTR6ZkesPS1A/exec';
+  const form = document.forms['form-konsultasi'];
+
+  const btnKirim = document.querySelector('.btn-kirim');
+  const btnLoading = document.querySelector('.btn-loading');
+  const myAlert = document.querySelector('.my-alert');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    // ketika tombol submit di klik 
+    // tampilkan tombol loading hilangkan tombol kirim
+    btnLoading.classList.toggle('d-none');
+    btnKirim.classList.toggle('d-none');
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        // tampilkan tombol kirim, hilangkan tombol loading
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        // tampilkan alert
+        myAlert.classList.toggle('d-none');
+        //reset formnya
+        form.reset();
+        
+        console.log('Success!', response)
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>

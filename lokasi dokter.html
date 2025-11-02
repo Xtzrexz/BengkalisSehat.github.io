@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Klinik Dokter</title>
+    <link rel="icon" href="asset/logo.jfif" class="rounded" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar bg-success fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="index.html"><img src="asset/bks.png" width="50" rounded alt="Logo Bengkalis">Bengkalis Sehat</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="asset/pks.png" width="40" rounded alt="Logo Puskesmas" class="m-1">Bengkalis Sehat</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active text-success" href="https://www.klikdokter.com/obat" target="_blank"><i class="bi bi-capsule m-1"></i>Info Obat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-success" href="https://www.klikdokter.com/penyakit" target="_blank"><i class="bi bi-lungs-fill m-1"></i>Info Penyakit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-success" href="lokasi dokter.html"><i class="bi bi-people m-1"></i>Lokasi Klinik Dokter Di Sekitar</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+    <!-- Beranda -->
+     <section id="home" class="container text-center py-5 mt-5">
+      <!-- Deretan Icon -->
+      <div class="row justify-content-center gy-4">
+        <!-- Item 1 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+            <a href="index.html"><img src="asset/Info stem Cell.png" alt="Stem Cell" width="60"></a>
+          </div>
+          <p class=" mb-1 fw-semibold">Info</p>
+          <small class="text-muted">Stem Cell</small>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+            <a href="https://www.klikdokter.com/obat" target="_blank"><img src="asset/InfoObat.png" alt="Obat" width="60"></a>
+          </div>
+          <p class="mb-1 fw-semibold">Info</p>
+          <small class="text-muted">Obat</small>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+            <a href="https://www.klikdokter.com/penyakit" target="_blank"><img src="asset/InfoPenyakit.png" alt="Penyakit" width="60"></a>
+          </div>
+          <p class="mb-1 fw-semibold">Info</p>
+          <small class="text-muted">Penyakit</small>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+            <a href="konsultasi.html"><img src="asset/JagaJantung.png" alt="konsultasi" width="60"></a>
+          </div>
+          <p class="mb-1 fw-semibold">Konsultasi</p>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+
+              <!-- Button trigger modal -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                 <img src="asset/Lainnya.png" alt="Lainnya" width="60">
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cek Kesehatan Mu</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-2 ms-2">
+                            <a href="https://www.klikdokter.com/cegah-kanker" target="_blank"><img src="asset/CegahKanker.png" alt="Stem Cell" width="60"></a><p class="mb-1 fw-semibold">Cegah Kanker</p>
+                          </div>
+                          <div class="col-md-2 ms-2"><a href="https://www.klikdokter.com/cegah-diabetes" target="_blank"><img src="asset/CegahDiabetes.png" alt="Stem Cell" width="60"></a><p class="mb-1 fw-semibold">Cegah Diabetes</p>
+                          </div>
+                          <div class="col-md-2 ms-2"><a href="https://www.klikdokter.com/kalkulator-bmi" target="_blank"><img src="asset/Kalkulator.png" alt="Stem Cell" width="60"></a><p class="mb-1 fw-semibold">Kakulator BMI</p>
+                          </div>
+                          <div class="col-md-2 ms-2"><a href="https://www.klikdokter.com/kalender-kehamilan" target="_blank"><img src="asset/KalenderKehamilan.png" alt="Stem Cell" width="60"></a><p class="mb-1 fw-semibold">Kalender Kehamilan</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <p class="mb-1 fw-semibold">Lainnya</p>
+        </div>
+      </div>
+     </section>
+    <!-- End Beranda -->
+
+     <!-- Home -->
+      <div class="container py-2 mt-2">
+      <h4 class="fw-bold mb-4">Lokasi Klinik Bengkalis Sehat</h4>
+      <p class="text-muted mb-5">Bengkalis Sehat Menyediakan Lokasi Klinik Di Pulau Bengkalis Dan Telah Berkolaborasi</p>
+      </div>
+      <!-- End Home -->
+
+      <!-- Content -->
+          <div class="container">
+            <!-- Content Row -->
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100 border-primary">
+            <img src="asset/anida.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Klinik Bersalin Bidan Anida</h5>
+            <p class="card-text">Bidan</p>
+          </div>
+          <div class="card-footer">
+      
+            <a href="https://maps.app.goo.gl/R65gvhWkYvDv2x229" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-geo-alt-fill m-1"></i>Detail Lokasi</a>
+          
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100 border-primary">
+            <img src="asset/cantik.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Klinik cantik drwSkincare agen Maria Elfina abral</h5>
+            <p class="card-text">Pemasok Produk Kecantikan </p>
+          </div>
+          <div class="card-footer">
+            <a href="https://maps.app.goo.gl/uXwBzuz7VpcNEN5y7" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-geo-alt-fill m-1"></i>Detail Lokasi</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100 border-primary">
+            <img src="asset/safra.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Klinik Safra Rita</h5>
+            <p class="card-text">Klinik Kesehatan Reproduksi</p>
+          </div>
+          <div class="card-footer">
+      
+            <a href="https://maps.app.goo.gl/mXpwHpZP9cEZ5jds8" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-geo-alt-fill m-1"></i>Detail Lokasi</a>
+          
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100 border-primary">
+            <img src="asset/purboyo.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Praktek Umum Dr Purboyo</h5>
+            <p class="card-text">Klinik Kesehatan</p>
+          </div>
+          <div class="card-footer">
+            
+            <a href="https://maps.app.goo.gl/3neoQvSTBPgejgjx6" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-geo-alt-fill m-1"></i>Detail Lokasi</a>
+            
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      
+      <div class="col-md-4 mb-5">
+        <div class="card h-100 border-primary">
+            <img src="asset/djasur.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Dja'sur Skin Health</h5>
+            <p class="card-text">Klinik Perawatan Kulit</p>
+          </div>
+          <div class="card-footer">
+        
+            <a href="https://maps.app.goo.gl/NUHYjzX6vZD4LK9g6" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-geo-alt-fill m-1"></i>Detail Lokasi</a>
+   
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100 border-primary">
+            <img src="asset/moris.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Klinik Pratama dr Moris</h5>
+            <p class="card-text">Apotek</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://maps.app.goo.gl/Js3mZRN77ukEVDB17" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-geo-alt-fill m-1"></i>Detail Lokasi</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100 border-primary">
+            <img src="asset/nuri.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Praktek dr. Nuri Malasari dan Bedah Umum</h5>
+            <p class="card-text">Klinik Kesehatan</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://maps.app.goo.gl/na2xCqvnSwr3uJw46" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-geo-alt-fill m-1"></i>Detail Lokasi</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100 border-primary">
+            <img src="asset/syam.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Tukang Gigi Syamsul Dental</h5>
+            <p class="card-text">Klinik Gigi</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://maps.app.goo.gl/bZ8M5BTxRbbuuejQA" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-geo-alt-fill m-1"></i>Detail Lokasi</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100 border-primary">
+            <img src="asset/ihsan.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Praktek Dokter Ihsan & Dokter Witri</h5>
+            <p class="card-text">Klinik Medis</p>
+          </div>
+          <div class="card-footer">
+            <a href="https://maps.app.goo.gl/wBzTcTQr9sGDsmCo6" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-geo-alt-fill m-1"></i>Detail Lokasi</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+
+    </div>
+    <!-- /.row -->
+          </div>
+      <!-- End Content -->
+
+
+       <!-- Tombol Kembali ke Atas -->
+    <button type="button"class="btn btn-success btn-lg rounded-circle position-fixed" id="btnBackToTop" style="bottom: 10px; right: 10px; display: none; z-index: 1000;"> <i class="bi bi-arrow-bar-up"></i></button>
+    <!-- Footer -->
+      <footer class="bg-light pt-5 pb-3 mt-5 border-top">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img src="asset/bks.png" alt="Logo" class="mb-3" style="max-width:70px;"><b class="ms-0" >BENGKALIS SEHAT</b>
+
+        <h5>Jaga Sehatmu<br>Konsultasi Lewat Smartphone</h5>
+        <p>Website jaga kesehatan dengan beragam layanan dan informasi terpercaya,
+          agar hidup lebih nyaman.</p>
+
+        <p class="fw-semibold">Tetap Terhubung dengan Kami</p>
+        <div class="d-flex gap-3">
+          <a href="https://www.instagram.com/xtzrexz" target="_blank"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="https://www.facebook.com/trreexz" target="_blank"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="https://www.tiktok.com/@rezkirexz?_" target="_blank"><i class="bi bi-tiktok fs-4"></i></a>
+        </div>
+
+        <div class="mt-4">
+          <p class="mb-1">Bagian dari:</p>
+          <img src="asset/kalbe.png" alt="KALBE" style="max-width:120px;">
+        </div>
+      </div>
+
+      <!-- MENU 1 -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold">Lebih Dekat</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://rsudbengkalis.bengkaliskab.go.id/jadwal-pelayanan-poliklinik" target="_blank" class="text-decoration-none text-dark">Tentang Bengkalis Sehat</a></li>
+          <li><a href="https://whatsapp.com/dl/083140422794" target="_blank" class="text-decoration-none text-dark">Hubungi Kami</a></li>
+        </ul>
+      </div>
+
+      <!-- MENU 2 -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold">Layanan</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://www.klikdokter.com/obat" class="text-decoration-none text-dark">Info Obat</a></li>
+          <li><a href="https://www.klikdokter.com/penyakit" class="text-decoration-none text-dark">Info Penyakit</a></li>
+        </ul>
+      </div>
+
+      <!-- MENU 3 -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold">Kolaborasi Bengkalis Sehat X Klik Dokter</h6>
+        <p class="fw-semibold mb-1">Korporasi</p>
+        <p class="small">Mitra Perusahaan Pemilik Produk</p>
+
+        <p class="fw-semibold mb-1 mt-3">Tenaga Kesehatan</p>
+        <p class="small">Dokter, Apoteker, Bidan, Perawat</p>
+
+        <p class="fw-semibold mb-1 mt-3">Fasilitas Kesehatan</p>
+        <p class="small">Bidan, Klinik, Apotek</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <p class="mb-0">Copyright © 2025 Bengkalis Sehat </p>
+      <div class="text-end">
+        <p class="mb-1">Mitra Resmi dari:</p>
+        <img src="asset/kemenkes.png" alt="Kemenkes" style="max-width:160px;">
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script>
+      // Ambil tombolnya
+      const btn = document.getElementById("btnBackToTop");
+
+      // Tampilkan tombol jika scroll lebih dari 200px
+      window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      };
+
+      // Scroll ke atas saat tombol diklik
+      btn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
