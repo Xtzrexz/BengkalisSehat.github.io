@@ -123,7 +123,7 @@
                                 <label for="nama"><i class="fa fa-at mr-2 text-danger"></i>Nama Lengkap:</label>
                                 <input type="text" class="form-control"  id="nama" name="nama" required="" placeholder="Masukkan Nama Lengkap">
                               </div>
-                              <div class="form-group">
+                              <div class="form-group mt-0">
                               <div class="custom-control custom-radio">
                               <input type="radio" id="customRadio1" name="jenis_kelamin" class="custom-control-input" value="laki_laki">
                                   <label class="custom-control-label" for="customRadio1">Laki-Laki</label>
@@ -142,19 +142,76 @@
 
                               <div class="form-group">
                                 <label for="no_hp"><i class="fa fa-mobile-phone mr-2 text-secondary"></i>Nomor Handphone :</label>
-                                <input type="number" class="form-control"  id="no_hp" name="no_hp" required="" placeholder="+62**">
+                                <input type="number" class="form-control"  id="no_hp" name="no_hp" required="" placeholder="0812345678">
                               </div>
-
                               <div class="form-group">
                                 <label for="alamat lengkap"><i class="fa fa-map mr-2"></i>Alamat Lengkap :</label>
                                 <input type="text" class="form-control"  id="alamat lengkap" name="alamat_lengkap" required="">
                               </div>
                               <div class="form-group">
-                                <div class="custom-control custom-switch">
-                                  <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                  <label class="custom-control-label" for="customSwitch1">Remember Me</label>
-                                </div>
+                                <label class="form-label">Pilih Layanan / Poli</label>
+                                  <select class="form-select" name="layanan" required="">
+                                    <option selected>Pilih...</option>
+                                     <option>Konsultasi Umum</option>
+                                        <option>Kesehatan Anak</option>
+                                        <option>Bersalin Bidan</option>
+                                        <option>Gigi & Mulut</option>
+                                        <option>Ibu & Anak</option>
+                                        <option>Konsultasi Perawatan Kulit</option>
+                                        <option>Konsultasi Gizi</option>
+                                        <option>Pemeriksaan Labor & Apotek</option>
+                                  </select>
                               </div>
+                               <div class="form-group">
+                                  <label class="form-label">Pilih Dokter (opsional)</label>
+                                  <select class="form-select" name="dokter" required="">
+                                    <option selected>Pilih...</option>
+                                    <option>dr. Nuri Malasari </option>
+                                    <option>dr. Moris</option>
+                                    <option>dr. Syamsul</option>
+                                    <option>dr. ihsan dan dr. Witri</option>
+                                    <option>dr. Purboyo</option>
+                                    <option>dr. Okta</option>
+                                    <option>dr. Bidan Anida</option>
+                                    <option>dr. Maria Elfina</option>
+                                    <option>dr. Safra Rita</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label class="form-label">Keluhan Singkat</label>
+                                  <textarea class="form-control" rows="3" name="keluhan" placeholder="Contoh: sakit kepala, batuk lama, dll."></textarea>
+                                </div>
+                                <div class="form-group">
+                                  <label class="form-label">Tanggal Konsultasi</label>
+                                  <input type="date" class="form-control" name="tanggal_konsultasi" required>
+                                </div>
+                                <div class="form-group">
+                                  <label class="form-label">Waktu Konsultasi</label>
+                                  <select class="form-select" name="waktu_konsultasi" required>
+                                    <option value="">Pilih...</option>
+                                    <option value="Pagi">Pagi</option>
+                                    <option value="Siang">Siang</option>
+                                    <option value="Sore">Sore</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <label for="form-label">Metode </label>
+                                  <select class="form-select" name="metode" required>
+                                    <option value="">Pilih metode...</option>
+                                    <option value="Datang Langsung">Datang Langsung</option>
+                                    <option value="Konsultasi Online">Konsultasi Online (WA/Video Call)</option>
+                                  </select>
+                                </div>
+                                <div class="form-group">
+                                  <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="persetujuan" required>
+                                  <label class="form-check-label">
+                                    Saya menyetujui penggunaan data untuk keperluan konsultasi Bengkalis Sehat.
+                                  </label>
+                                </div>
+                                </div>
+
+                  
                               <button type="submit" class="btn btn-success btn-kirim" name="daftar">Submit</button>
                               <button class="btn btn-success btn-loading d-none" type="button" disabled>
                                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>

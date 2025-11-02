@@ -241,14 +241,17 @@
                   Tim profesional kami siap membantu Anda memahami lebih dalam tentang
                   terapi Stem Cell dan manfaatnya bagi kesehatan Anda.
                 </p>
-
-                <form>
+                <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                  <strong>Terima kasih!</strong> Pesan anda telah terkirim
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <form name="form-pesan">
                   <div class="mb-3">
                     <label for="nama" class="form-label fw-semibold">Nama Lengkap</label>
                     <input
                       type="text"
                       class="form-control form-control-lg rounded-3"
-                      id="nama"
+                      id="nama" name="nama"
                       placeholder="Masukkan nama Anda"
                       required
                     />
@@ -259,7 +262,7 @@
                     <input
                       type="email"
                       class="form-control form-control-lg rounded-3"
-                      id="email"
+                      id="email" name="email"
                       placeholder="Masukkan email aktif"
                       required
                     />
@@ -269,7 +272,7 @@
                     <label for="pesan" class="form-label fw-semibold">Pesan atau Pertanyaan</label>
                     <textarea
                       class="form-control form-control-lg rounded-3"
-                      id="pesan"
+                      id="pesan" name="pesan"
                       rows="4"
                       placeholder="Tuliskan pertanyaan Anda di sini..."
                       required
@@ -278,9 +281,12 @@
 
                   <button
                     type="submit"
-                    class="btn btn-success btn-lg rounded-pill px-5 fw-bold"
-                  >
+                    class="btn btn-success btn-lg rounded-pill px-5 fw-bold btn-kirim" name="daftar">
                     Kirim Pesan
+                  </button>
+                  <button class="btn btn-success btn-loading d-none" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Loading...
                   </button>
                 </form>
               </div>
@@ -381,5 +387,38 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
     </script>
+
+
+
+<!-- script pesan google spreesed -->
+ <script>
+  const scriptURL = '#';
+  const form = document.forms['form-pesan'];
+
+  const btnKirim = document.querySelector('.btn-kirim');
+  const btnLoading = document.querySelector('.btn-loading');
+  const myAlert = document.querySelector('.my-alert');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    // ketika tombol submit di klik 
+    // tampilkan tombol loading hilangkan tombol kirim
+    btnLoading.classList.toggle('d-none');
+    btnKirim.classList.toggle('d-none');
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        // tampilkan tombol kirim, hilangkan tombol loading
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        // tampilkan alert
+        myAlert.classList.toggle('d-none');
+        //reset formnya
+        form.reset();
+        
+        console.log('Success!', response)
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
   </body>
 </html>
