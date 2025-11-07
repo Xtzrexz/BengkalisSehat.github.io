@@ -128,48 +128,176 @@
 
       <!-- Content -->
           <div class="container">
-           <!-- FILTER KATEGORI -->
-                <div class="row mb-3">
-                  <div class="col-md-4 mb-1">
-                    <select id="filterKategori" class="form-select">
-                      <option value="all">Semua Kategori</option>
-                      <option value="infeksi">Infeksi</option>
-                      <option value="pernapasan">Pernapasan</option>
-                      <option value="jantung">Jantung & Pembuluh Darah</option>
-                      <option value="pencernaan">Pencernaan</option>
-                      <option value="kronis">Kronis</option>
-                      <option value="kulit">Kulit</option>
-                      <option value="metabolik">Metabolik</option>
-                      <option value="saraf">Saraf</option>
-                    </select>
-                  </div>
+            <!-- Content Row -->
+             <hr class="my-4">
+        <div class="jumbotron jumbotron-fluid bg-light">
+        <div class="container mt-3">
+            <h2 class="text-center text-success"><i class="fa fa-table mr-2"></i>Daftar Penyakit</h2>
+            <hr class="divider">
+            <p>Cari Penyakit Yang Kalian Suka Dan Kalau Ada Kesalahan Mohon Hubungi <a class="text-success text-decoration-none" href="https://wa.me/083140422794" target="_blank"><i class="bi bi-whatsapp me-2"></i>Bantuan</a></p>  
+            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+            <br>
+            <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Nama Kue</th>
+                <th scope="col">Image</th>
+                <th scope="col">Kode Kue</th>
+                <th scope="col">Pesan</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
 
-                  <div class="col-md-4 mt-1">
-                    <input id="searchInput" type="text" class="form-control" placeholder="Cari penyakit...">
-                  </div>
-                </div>
+            <tr>
+            <th scope="col">1</th>
+            <td>Asma</td>
+            <td class="text-center">
+            <a href="https://www.alodokter.com/asma" target="_blank">
+            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250851/attached_image/asma-alodokter.jpg" width="100" height="60">
+            </a>
+            </td>
+            <td>ASM01</td>
+            <td class="text-center">
+            <a class="btn btn-outline-success" href="https://www.alodokter.com/asma" target="_blank">Detail</a>
+            </td>
+            </tr>
 
-                <!-- TABEL PENYAKIT -->
-                <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                  <thead class="table-success">
-                    <tr>
-                      <th>No</th>
-                      <th>Nama Penyakit</th>
-                      <th>Gambar</th>
-                      <th>Kode</th>
-                      <th>Detail</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tabelPenyakit"></tbody>
-                </table>
-                </div>
+            <tr>
+            <th scope="col">2</th>
+            <td>Diabetes</td>
+            <td class="text-center">
+            <a href="https://www.alodokter.com/diabetes-melitus" target="_blank">
+            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1596469185/attached_image/diabetes-0-alodokter.jpg" width="100" height="60">
+            </a>
+            </td>
+            <td>DBT02</td>
+            <td class="text-center">
+            <a class="btn btn-outline-success" href="https://www.alodokter.com/diabetes-melitus" target="_blank">Detail</a>
+            </td>
+            </tr>
 
-                <!-- PAGINATION -->
-                <nav>
-                  <ul id="pagination" class="pagination justify-content-center"></ul>
-                </nav>
+            <tr>
+            <th scope="col">3</th>
+            <td>Hipertensi</td>
+            <td class="text-center">
+            <a href="https://www.alodokter.com/hipertensi" target="_blank">
+            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250845/attached_image/hipertensi-alodokter.jpg" width="100" height="60">
+            </a>
+            </td>
+            <td>HPT03</td>
+            <td class="text-center">
+            <a class="btn btn-outline-success" href="https://www.alodokter.com/hipertensi" target="_blank">Detail</a>
+            </td>
+            </tr>
 
+            <tr>
+            <th scope="col">4</th>
+            <td>Demam Berdarah</td>
+            <td class="text-center">
+            <a href="https://www.alodokter.com/demam-berdarah" target="_blank">
+            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1515990970/attached_image/demam-berdarah-alodokter.jpg" width="100" height="60">
+            </a>
+            </td>
+            <td>DBD04</td>
+            <td class="text-center">
+            <a class="btn btn-outline-success" href="https://www.alodokter.com/demam-berdarah" target="_blank">Detail</a>
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="col">5</th>
+            <td>Gastritis (Maag)</td>
+            <td class="text-center">
+            <a href="https://www.alodokter.com/maag" target="_blank">
+            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1618160886/attached_image/gastritis-0-alodokter.jpg" width="100" height="60">
+            </a>
+            </td>
+            <td>GAS05</td>
+            <td class="text-center">
+            <a class="btn btn-outline-success" href="https://www.alodokter.com/maag" target="_blank">Detail</a>
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="col">6</th>
+            <td>Covid-19</td>
+            <td class="text-center">
+            <a href="https://www.alodokter.com/covid-19" target="_blank">
+            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1592796259/attached_image/covid-19-0-alodokter.jpg" width="100" height="60">
+            </a>
+            </td>
+            <td>CVD06</td>
+            <td class="text-center">
+            <a class="btn btn-outline-success" href="https://www.alodokter.com/covid-19" target="_blank">Detail</a>
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="col">7</th>
+            <td>Kolesterol Tinggi</td>
+            <td class="text-center">
+            <a href="https://www.alodokter.com/kolesterol-tinggi" target="_blank">
+            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250856/attached_image/kolesterol-tinggi-alodokter.jpg" width="100" height="60">
+            </a>
+            </td>
+            <td>KLS07</td>
+            <td class="text-center">
+            <a class="btn btn-outline-success" href="https://www.alodokter.com/kolesterol-tinggi" target="_blank">Detail</a>
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="col">8</th>
+            <td>Gagal Ginjal</td>
+            <td class="text-center">
+            <a href="https://www.alodokter.com/gagal-ginjal" target="_blank">
+            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1681719402/attached_image/gagal-ginjal-kronis-0-alodokter.jpg" width="100" height="60">
+            </a>
+            </td>
+            <td>GGJ08</td>
+            <td class="text-center">
+            <a class="btn btn-outline-success" href="https://www.alodokter.com/gagal-ginjal" target="_blank">Detail</a>
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="col">9</th>
+            <td>Stroke</td>
+            <td class="text-center">
+            <a href="https://www.alodokter.com/stroke" target="_blank">
+            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250859/attached_image/stroke-alodokter.jpg" width="100" height="60">
+            </a>
+            </td>
+            <td>STK09</td>
+            <td class="text-center">
+            <a class="btn btn-outline-success" href="https://www.alodokter.com/stroke" target="_blank">Detail</a>
+            </td>
+            </tr>
+
+            <tr>
+            <th scope="col">10</th>
+            <td>TBC (Tuberkulosis)</td>
+            <td class="text-center">
+            <a href="https://www.alodokter.com/tuberkulosis" target="_blank">
+            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250865/attached_image/tuberkulosis-alodokter.jpg" width="100" height="60">
+            </a>
+            </td>
+            <td>TBC10</td>
+            <td class="text-center">
+            <a class="btn btn-outline-success" href="https://www.alodokter.com/tuberkulosis" target="_blank">Detail</a>
+            </td>
+            </tr>
+
+        </tbody>
+
+            </table>
+        </div>
+        
+        </div>
+        <p class="text-center"><a class="text-success text-decoration-none" href="https://www.alodokter.com/penyakit-a-z" target="_blank">Penyakit Lainnya <i class="bi bi-eye"></i>.....</a></p>
+        </div>
           </div>
       <!-- End Content -->
 
