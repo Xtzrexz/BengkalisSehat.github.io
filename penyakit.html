@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Klinik Dokter</title>
+    <title>Penyakit</title>
     <link rel="icon" href="asset/logo.jfif" class="rounded" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
@@ -24,7 +24,7 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active text-success" href="https://www.klikdokter.com/obat" target="_blank"><i class="bi bi-capsule m-1"></i>Info Obat</a>
+                <a class="nav-link active text-success" href="obat.html"><i class="bi bi-capsule m-1"></i>Info Obat</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active text-success" href="penyakit.html" ><i class="bi bi-lungs-fill m-1"></i>Info Penyakit</a>
@@ -56,7 +56,7 @@
         <!-- Item 2 -->
         <div class="col-6 col-md-2">
           <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
-            <a href="https://www.klikdokter.com/obat" target="_blank"><img src="asset/InfoObat.png" alt="Obat" width="60"></a>
+            <a href="obat.html"><img src="asset/InfoObat.png" alt="Obat" width="60"></a>
           </div>
           <p class="mb-1 fw-semibold">Info</p>
           <small class="text-muted">Obat</small>
@@ -128,176 +128,48 @@
 
       <!-- Content -->
           <div class="container">
-            <!-- Content Row -->
-             <hr class="my-4">
-        <div class="jumbotron jumbotron-fluid bg-light">
-        <div class="container mt-3">
-            <h2 class="text-center text-success"><i class="fa fa-table mr-2"></i>Daftar Penyakit</h2>
-            <hr class="divider">
-            <p>Cari Penyakit Yang Kalian Suka Dan Kalau Ada Kesalahan Mohon Hubungi <a class="text-success text-decoration-none" href="https://wa.me/083140422794" target="_blank"><i class="bi bi-whatsapp me-2"></i>Bantuan</a></p>  
-            <input class="form-control" id="myInput" type="text" placeholder="Search..">
-            <br>
-            <div class="table-responsive">
-            <table class="table table-bordered table-hover">
-            <thead>
-                <tr>
-                <th scope="col">No.</th>
-                <th scope="col">Nama Kue</th>
-                <th scope="col">Image</th>
-                <th scope="col">Kode Kue</th>
-                <th scope="col">Pesan</th>
-                </tr>
-            </thead>
-            <tbody id="myTable">
+           <!-- FILTER KATEGORI -->
+                <div class="row mb-3">
+                  <div class="col-md-4 mb-1">
+                    <select id="filterKategori" class="form-select">
+                      <option value="all">Semua Kategori</option>
+                      <option value="infeksi">Infeksi</option>
+                      <option value="pernapasan">Pernapasan</option>
+                      <option value="jantung">Jantung & Pembuluh Darah</option>
+                      <option value="pencernaan">Pencernaan</option>
+                      <option value="kronis">Kronis</option>
+                      <option value="kulit">Kulit</option>
+                      <option value="metabolik">Metabolik</option>
+                      <option value="saraf">Saraf</option>
+                    </select>
+                  </div>
 
-            <tr>
-            <th scope="col">1</th>
-            <td>Asma</td>
-            <td class="text-center">
-            <a href="https://www.alodokter.com/asma" target="_blank">
-            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250851/attached_image/asma-alodokter.jpg" width="100" height="60">
-            </a>
-            </td>
-            <td>ASM01</td>
-            <td class="text-center">
-            <a class="btn btn-outline-success" href="https://www.alodokter.com/asma" target="_blank">Detail</a>
-            </td>
-            </tr>
+                  <div class="col-md-4 mt-1">
+                    <input id="searchInput" type="text" class="form-control" placeholder="Cari penyakit...">
+                  </div>
+                </div>
 
-            <tr>
-            <th scope="col">2</th>
-            <td>Diabetes</td>
-            <td class="text-center">
-            <a href="https://www.alodokter.com/diabetes-melitus" target="_blank">
-            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1596469185/attached_image/diabetes-0-alodokter.jpg" width="100" height="60">
-            </a>
-            </td>
-            <td>DBT02</td>
-            <td class="text-center">
-            <a class="btn btn-outline-success" href="https://www.alodokter.com/diabetes-melitus" target="_blank">Detail</a>
-            </td>
-            </tr>
+                <!-- TABEL PENYAKIT -->
+                <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                  <thead class="table-success">
+                    <tr>
+                      <th>No</th>
+                      <th>Nama Penyakit</th>
+                      <th>Gambar</th>
+                      <th>Kode</th>
+                      <th>Detail</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tabelPenyakit"></tbody>
+                </table>
+                </div>
 
-            <tr>
-            <th scope="col">3</th>
-            <td>Hipertensi</td>
-            <td class="text-center">
-            <a href="https://www.alodokter.com/hipertensi" target="_blank">
-            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250845/attached_image/hipertensi-alodokter.jpg" width="100" height="60">
-            </a>
-            </td>
-            <td>HPT03</td>
-            <td class="text-center">
-            <a class="btn btn-outline-success" href="https://www.alodokter.com/hipertensi" target="_blank">Detail</a>
-            </td>
-            </tr>
+                <!-- PAGINATION -->
+                <nav>
+                  <ul id="pagination" class="pagination justify-content-center"></ul>
+                </nav>
 
-            <tr>
-            <th scope="col">4</th>
-            <td>Demam Berdarah</td>
-            <td class="text-center">
-            <a href="https://www.alodokter.com/demam-berdarah" target="_blank">
-            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1515990970/attached_image/demam-berdarah-alodokter.jpg" width="100" height="60">
-            </a>
-            </td>
-            <td>DBD04</td>
-            <td class="text-center">
-            <a class="btn btn-outline-success" href="https://www.alodokter.com/demam-berdarah" target="_blank">Detail</a>
-            </td>
-            </tr>
-
-            <tr>
-            <th scope="col">5</th>
-            <td>Gastritis (Maag)</td>
-            <td class="text-center">
-            <a href="https://www.alodokter.com/maag" target="_blank">
-            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1618160886/attached_image/gastritis-0-alodokter.jpg" width="100" height="60">
-            </a>
-            </td>
-            <td>GAS05</td>
-            <td class="text-center">
-            <a class="btn btn-outline-success" href="https://www.alodokter.com/maag" target="_blank">Detail</a>
-            </td>
-            </tr>
-
-            <tr>
-            <th scope="col">6</th>
-            <td>Covid-19</td>
-            <td class="text-center">
-            <a href="https://www.alodokter.com/covid-19" target="_blank">
-            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1592796259/attached_image/covid-19-0-alodokter.jpg" width="100" height="60">
-            </a>
-            </td>
-            <td>CVD06</td>
-            <td class="text-center">
-            <a class="btn btn-outline-success" href="https://www.alodokter.com/covid-19" target="_blank">Detail</a>
-            </td>
-            </tr>
-
-            <tr>
-            <th scope="col">7</th>
-            <td>Kolesterol Tinggi</td>
-            <td class="text-center">
-            <a href="https://www.alodokter.com/kolesterol-tinggi" target="_blank">
-            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250856/attached_image/kolesterol-tinggi-alodokter.jpg" width="100" height="60">
-            </a>
-            </td>
-            <td>KLS07</td>
-            <td class="text-center">
-            <a class="btn btn-outline-success" href="https://www.alodokter.com/kolesterol-tinggi" target="_blank">Detail</a>
-            </td>
-            </tr>
-
-            <tr>
-            <th scope="col">8</th>
-            <td>Gagal Ginjal</td>
-            <td class="text-center">
-            <a href="https://www.alodokter.com/gagal-ginjal" target="_blank">
-            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1681719402/attached_image/gagal-ginjal-kronis-0-alodokter.jpg" width="100" height="60">
-            </a>
-            </td>
-            <td>GGJ08</td>
-            <td class="text-center">
-            <a class="btn btn-outline-success" href="https://www.alodokter.com/gagal-ginjal" target="_blank">Detail</a>
-            </td>
-            </tr>
-
-            <tr>
-            <th scope="col">9</th>
-            <td>Stroke</td>
-            <td class="text-center">
-            <a href="https://www.alodokter.com/stroke" target="_blank">
-            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250859/attached_image/stroke-alodokter.jpg" width="100" height="60">
-            </a>
-            </td>
-            <td>STK09</td>
-            <td class="text-center">
-            <a class="btn btn-outline-success" href="https://www.alodokter.com/stroke" target="_blank">Detail</a>
-            </td>
-            </tr>
-
-            <tr>
-            <th scope="col">10</th>
-            <td>TBC (Tuberkulosis)</td>
-            <td class="text-center">
-            <a href="https://www.alodokter.com/tuberkulosis" target="_blank">
-            <img src="https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250865/attached_image/tuberkulosis-alodokter.jpg" width="100" height="60">
-            </a>
-            </td>
-            <td>TBC10</td>
-            <td class="text-center">
-            <a class="btn btn-outline-success" href="https://www.alodokter.com/tuberkulosis" target="_blank">Detail</a>
-            </td>
-            </tr>
-
-        </tbody>
-
-            </table>
-        </div>
-        
-        </div>
-        <p class="text-center"><a class="text-success text-decoration-none" href="https://www.alodokter.com/penyakit-a-z" target="_blank">Penyakit Lainnya <i class="bi bi-eye"></i>.....</a></p>
-        </div>
           </div>
       <!-- End Content -->
 
@@ -397,15 +269,178 @@
       });
     </script>
 
-    <script>
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("#myTable tr").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
+   <script>
+// =====================
+// DATA PENYAKIT (30 ITEM)
+// =====================
+const penyakitData = [
+  { nama: "Asma", kode: "ASM01", kategori: "pernapasan", link: "https://www.alodokter.com/asma",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250851/attached_image/asma-alodokter.jpg"
+  },
+  { nama: "Diabetes", kode: "DBT02", kategori: "metabolik", link: "https://www.alodokter.com/diabetes-melitus",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250868/attached_image/diabetes-melitus-alodokter.jpg"
+  },
+  { nama: "Hipertensi", kode: "HPT03", kategori: "jantung", link: "https://www.alodokter.com/hipertensi",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250845/attached_image/hipertensi-alodokter.jpg"
+  },
+  { nama: "Demam Berdarah", kode: "DBD04", kategori: "infeksi", link: "https://www.alodokter.com/demam-berdarah",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1515990970/attached_image/demam-berdarah-alodokter.jpg"
+  },
+  { nama: "Maag / Gastritis", kode: "GAS05", kategori: "pencernaan", link: "https://www.alodokter.com/maag",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250862/attached_image/maag-alodokter.jpg"
+  },
+  { nama: "COVID-19", kode: "CVD06", kategori: "infeksi", link: "https://www.alodokter.com/covid-19",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1584604273/attached_image/covid-19-alodokter.jpg"
+  },
+  { nama: "Kolesterol Tinggi", kode: "KLS07", kategori: "kronis", link: "https://www.alodokter.com/kolesterol-tinggi",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250856/attached_image/kolesterol-tinggi-alodokter.jpg"
+  },
+  { nama: "Gagal Ginjal", kode: "GGJ08", kategori: "kronis", link: "https://www.alodokter.com/gagal-ginjal",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250862/attached_image/gagal-ginjal-alodokter.jpg"
+  },
+  { nama: "Stroke", kode: "STK09", kategori: "saraf", link: "https://www.alodokter.com/stroke",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250859/attached_image/stroke-alodokter.jpg"
+  },
+  { nama: "Tuberkulosis", kode: "TBC10", kategori: "infeksi", link: "https://www.alodokter.com/tuberkulosis",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250865/attached_image/tuberkulosis-alodokter.jpg"
+  },
+
+  // Tambahan agar mencapai 30:
+  { nama: "Alergi", kode: "ALG11", kategori: "kulit", link: "https://www.alodokter.com/alergi",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250851/attached_image/alergi-alodokter.jpg"
+  },
+  { nama: "Anemia", kode: "ANM12", kategori: "kronis", link: "https://www.alodokter.com/anemia",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250854/attached_image/anemia-alodokter.jpg"
+  },
+  { nama: "Artritis", kode: "ART13", kategori: "kronis", link: "https://www.alodokter.com/artritis",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250854/attached_image/artritis-alodokter.jpg"
+  },
+  { nama: "Bronkitis", kode: "BRK14", kategori: "pernapasan", link: "https://www.alodokter.com/bronkitis",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250855/attached_image/bronkitis-alodokter.jpg"
+  },
+  { nama: "Cacar Air", kode: "CCR15", kategori: "infeksi", link: "https://www.alodokter.com/cacar-air",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250856/attached_image/cacar-air-alodokter.jpg"
+  },
+  { nama: "Migraine", kode: "MGR16", kategori: "saraf", link: "https://www.alodokter.com/migrain",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250863/attached_image/migrain-alodokter.jpg"
+  },
+  { nama: "Hepatitis", kode: "HPT17", kategori: "infeksi", link: "https://www.alodokter.com/hepatitis",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250857/attached_image/hepatitis-alodokter.jpg"
+  },
+  { nama: "Asam Urat", kode: "UA18", kategori: "metabolik", link: "https://www.alodokter.com/asam-urat",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250851/attached_image/asam-urat-alodokter.jpg"
+  },
+  { nama: "Kanker Payudara", kode: "KPY19", kategori: "kronis", link: "https://www.alodokter.com/kanker-payudara",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250856/attached_image/kanker-payudara-alodokter.jpg"
+  },
+  { nama: "Psoriasis", kode: "PSR20", kategori: "kulit", link: "https://www.alodokter.com/psoriasis",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250862/attached_image/psoriasis-alodokter.jpg"
+  },
+  { nama: "Varisela", kode: "VRS21", kategori: "infeksi", link: "https://www.alodokter.com/varisela",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250866/attached_image/varisela-alodokter.jpg"
+  },
+  { nama: "Pneumonia", kode: "PNM22", kategori: "pernapasan", link: "https://www.alodokter.com/pneumonia",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250861/attached_image/pneumonia-alodokter.jpg"
+  },
+  { nama: "Aritmia", kode: "ARM23", kategori: "jantung", link: "https://www.alodokter.com/aritmia",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250854/attached_image/aritmia-alodokter.jpg"
+  },
+  { nama: "GERD", kode: "GRD24", kategori: "pencernaan", link: "https://www.alodokter.com/gerd",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250863/attached_image/gerd-alodokter.jpg"
+  },
+  { nama: "Sakit Kepala Tegang", kode: "SKT25", kategori: "saraf", link: "https://www.alodokter.com/sakit-kepala-tegang",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250860/attached_image/sakit-kepala-alodokter.jpg"
+  },
+  { nama: "Kista Ovarium", kode: "KOV26", kategori: "kronis", link: "https://www.alodokter.com/kista-ovarium",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250858/attached_image/kista-ovarium-alodokter.jpg"
+  },
+  { nama: "Sinusitis", kode: "SNS27", kategori: "pernapasan", link: "https://www.alodokter.com/sinusitis",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250860/attached_image/sinusitis-alodokter.jpg"
+  },
+  { nama: "Tipes", kode: "TPS28", kategori: "infeksi", link: "https://www.alodokter.com/tifus",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250864/attached_image/tifus-alodokter.jpg"
+  },
+  { nama: "Jerawat", kode: "JRW29", kategori: "kulit", link: "https://www.alodokter.com/jerawat",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250857/attached_image/jerawat-alodokter.jpg"
+  },
+  { nama: "Asidosis Metabolik", kode: "ASM30", kategori: "metabolik", link: "https://www.alodokter.com/asidosis-metabolik",
+    img: "https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250851/attached_image/asidosis-metabolik-alodokter.jpg"
+  }
+];
+
+// =====================
+// PAGINATION + FILTER
+// =====================
+let currentPage = 1;
+const itemPerPage = 10;
+
+function renderTable() {
+  const tbody = document.getElementById("tabelPenyakit");
+  tbody.innerHTML = "";
+
+  const kategori = document.getElementById("filterKategori").value;
+  const cari = document.getElementById("searchInput").value.toLowerCase();
+
+  let filtered = penyakitData.filter(p =>
+    (kategori === "all" || p.kategori === kategori) &&
+    p.nama.toLowerCase().includes(cari)
+  );
+
+  // PAGINATION
+  const start = (currentPage - 1) * itemPerPage;
+  const end = start + itemPerPage;
+  const pageItems = filtered.slice(start, end);
+
+  // RENDER TABEL
+  pageItems.forEach((p, i) => {
+    tbody.innerHTML += `
+      <tr>
+        <td>${start + i + 1}</td>
+        <td>${p.nama}</td>
+        <td class="text-center"><img src="${p.img}" width="100" height="60"></td>
+        <td>${p.kode}</td>
+        <td class="text-center">
+          <a class="btn btn-outline-success" href="${p.link}" target="_blank">Detail</a>
+        </td>
+      </tr>
+    `;
   });
+
+  renderPagination(filtered.length);
+}
+
+function renderPagination(totalItems) {
+  const pages = Math.ceil(totalItems / itemPerPage);
+  const pagination = document.getElementById("pagination");
+  pagination.innerHTML = "";
+
+  for (let i = 1; i <= pages; i++) {
+    pagination.innerHTML += `
+      <li class="page-item ${i === currentPage ? "active" : ""}">
+        <button class="page-link" onclick="changePage(${i})">${i}</button>
+      </li>`;
+  }
+}
+
+function changePage(page) {
+  currentPage = page;
+  renderTable();
+}
+
+// === EVENT LISTENER ===
+document.getElementById("filterKategori").addEventListener("change", () => {
+  currentPage = 1;
+  renderTable();
 });
+
+document.getElementById("searchInput").addEventListener("keyup", () => {
+  currentPage = 1;
+  renderTable();
+});
+
+// FIRST LOAD
+renderTable();
 </script>
+
   </body>
 </html>

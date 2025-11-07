@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Obat</title>
+    <link rel="icon" href="asset/logo.jfif" class="rounded" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar bg-success fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" href="index.html"><img src="asset/bks.png" width="50" rounded alt="Logo Bengkalis">Bengkalis Sehat</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="asset/pks.png" width="40" rounded alt="Logo Puskesmas" class="m-1">Bengkalis Sehat</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active text-success" href="obat.html"><i class="bi bi-capsule m-1"></i>Info Obat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-success" href="penyakit.html" ><i class="bi bi-lungs-fill m-1"></i>Info Penyakit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active text-success" href="lokasi dokter.html"><i class="bi bi-people m-1"></i>Lokasi Klinik Dokter Di Sekitar</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+    <!-- Beranda -->
+     <section id="home" class="container text-center py-5 mt-5">
+      <!-- Deretan Icon -->
+      <div class="row justify-content-center gy-4">
+        <!-- Item 1 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+            <a href="index.html"><img src="asset/Info stem Cell.png" alt="Stem Cell" width="60"></a>
+          </div>
+          <p class=" mb-1 fw-semibold">Info</p>
+          <small class="text-muted">Stem Cell</small>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+            <a href="obat.html" ><img src="asset/InfoObat.png" alt="Obat" width="60"></a>
+          </div>
+          <p class="mb-1 fw-semibold">Info</p>
+          <small class="text-muted">Obat</small>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+            <a href="penyakit.html"><img src="asset/InfoPenyakit.png" alt="Penyakit" width="60"></a>
+          </div>
+          <p class="mb-1 fw-semibold">Info</p>
+          <small class="text-muted">Penyakit</small>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+            <a href="konsultasi.html"><img src="asset/JagaJantung.png" alt="konsultasi" width="60"></a>
+          </div>
+          <p class="mb-1 fw-semibold">Konsultasi</p>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="col-6 col-md-2">
+          <div class="rounded-circle  mx-auto d-flex align-items-center justify-content-center" style="width:80px; height:80px;">
+
+              <!-- Button trigger modal -->
+                <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                 <img src="asset/Lainnya.png" alt="Lainnya" width="60">
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cek Kesehatan Mu</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-md-2 ms-2">
+                            <a href="https://www.klikdokter.com/cegah-kanker" target="_blank"><img src="asset/CegahKanker.png" alt="Stem Cell" width="60"></a><p class="mb-1 fw-semibold">Cegah Kanker</p>
+                          </div>
+                          <div class="col-md-2 ms-2"><a href="https://www.klikdokter.com/cegah-diabetes" target="_blank"><img src="asset/CegahDiabetes.png" alt="Stem Cell" width="60"></a><p class="mb-1 fw-semibold">Cegah Diabetes</p>
+                          </div>
+                          <div class="col-md-2 ms-2"><a href="https://www.klikdokter.com/kalkulator-bmi" target="_blank"><img src="asset/Kalkulator.png" alt="Stem Cell" width="60"></a><p class="mb-1 fw-semibold">Kakulator BMI</p>
+                          </div>
+                          <div class="col-md-2 ms-2"><a href="https://www.klikdokter.com/kalender-kehamilan" target="_blank"><img src="asset/KalenderKehamilan.png" alt="Stem Cell" width="60"></a><p class="mb-1 fw-semibold">Kalender Kehamilan</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <p class="mb-1 fw-semibold">Lainnya</p>
+        </div>
+      </div>
+     </section>
+    <!-- End Beranda -->
+
+     <!-- Home -->
+      <div class="container py-2 mt-2">
+      <h4 class="fw-bold mb-4">Daftar Obat Bengkalis Sehat</h4>
+      <p class="text-muted mb-5">Bengkalis Sehat Menyediakan Daftar Obat Klinik Di Pulau Bengkalis Dan Telah Berkolaborasi</p>
+      </div>
+      <!-- End Home -->
+
+      <!-- Content -->
+          <!-- FILTER + SEARCH (sudah ada di markup, tapi pastikan id sama) -->
+                    <div class="container">
+                    <div class="row mb-3">
+                        <div class="col-md-4 mb-1">
+                        <select id="filterKategori" class="form-select">
+                            <option value="all">Semua Kategori</option>
+                            <option value="antibiotik">Antibiotik</option>
+                            <option value="antinyeri">Antinyeri</option>
+                            <option value="antivirus">Antivirus</option>
+                            <option value="vitamin">Vitamin & Suplemen</option>
+                            <option value="pencernaan">Pencernaan</option>
+                            <option value="pernapasan">Pernapasan</option>
+                            <option value="jantung">Jantung & Pembuluh Darah</option>
+                            <option value="kulit">Kulit</option>
+                            <option value="metabolik">Metabolik</option>
+                            <option value="saraf">Saraf</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+                        </div>
+
+                        <div class="col-md-4 mt-1">
+                        <input id="searchInput" type="text" class="form-control" placeholder="Cari obat...">
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                        <thead class="table-success">
+                            <tr>
+                            <th>No</th>
+                            <th>Nama Obat</th>
+                            <th>Gambar</th>
+                            <th>Kode</th>
+                            <th>Detail</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelObat"></tbody>
+                        </table>
+                    </div>
+
+                    <nav>
+                        <ul id="pagination" class="pagination justify-content-center"></ul>
+                    </nav>
+                    </div>
+      <!-- End Content -->
+
+
+       <!-- Tombol Kembali ke Atas -->
+    <button type="button"class="btn btn-success btn-lg rounded-circle position-fixed" id="btnBackToTop" style="bottom: 10px; right: 10px; display: none; z-index: 1000;"> <i class="bi bi-arrow-bar-up"></i></button>
+    <!-- Footer -->
+      <footer class="bg-light pt-5 pb-3 mt-5 border-top">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <img src="asset/bks.png" alt="Logo" class="mb-3" style="max-width:70px;"><b class="ms-0" >BENGKALIS SEHAT</b>
+
+        <h5>Jaga Sehatmu<br>Konsultasi Lewat Smartphone</h5>
+        <p>Website jaga kesehatan dengan beragam layanan dan informasi terpercaya,
+          agar hidup lebih nyaman.</p>
+
+        <p class="fw-semibold">Tetap Terhubung dengan Kami</p>
+        <div class="d-flex gap-3">
+          <a href="https://www.instagram.com/xtzrexz" target="_blank"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="https://www.facebook.com/trreexz" target="_blank"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="https://www.tiktok.com/@rezkirexz?_" target="_blank"><i class="bi bi-tiktok fs-4"></i></a>
+        </div>
+
+        <div class="mt-4">
+          <p class="mb-1">Bagian dari:</p>
+          <img src="asset/kalbe.png" alt="KALBE" style="max-width:120px;">
+        </div>
+      </div>
+
+      <!-- MENU 1 -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold">Lebih Dekat</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://rsudbengkalis.bengkaliskab.go.id/jadwal-pelayanan-poliklinik" target="_blank" class="text-decoration-none text-dark">Tentang Bengkalis Sehat</a></li>
+          <li><a href="https://whatsapp.com/dl/083140422794" target="_blank" class="text-decoration-none text-dark">Hubungi Kami</a></li>
+        </ul>
+      </div>
+
+      <!-- MENU 2 -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold">Layanan</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://www.klikdokter.com/obat" class="text-decoration-none text-dark">Info Obat</a></li>
+          <li><a href="https://www.klikdokter.com/penyakit" class="text-decoration-none text-dark">Info Penyakit</a></li>
+        </ul>
+      </div>
+
+      <!-- MENU 3 -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold">Kolaborasi Bengkalis Sehat X Klik Dokter</h6>
+        <p class="fw-semibold mb-1">Korporasi</p>
+        <p class="small">Mitra Perusahaan Pemilik Produk</p>
+
+        <p class="fw-semibold mb-1 mt-3">Tenaga Kesehatan</p>
+        <p class="small">Dokter, Apoteker, Bidan, Perawat</p>
+
+        <p class="fw-semibold mb-1 mt-3">Fasilitas Kesehatan</p>
+        <p class="small">Bidan, Klinik, Apotek</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <p class="mb-0">Copyright © 2025 Bengkalis Sehat </p>
+      <div class="text-end">
+        <p class="mb-1">Mitra Resmi dari:</p>
+        <img src="asset/kemenkes.png" alt="Kemenkes" style="max-width:160px;">
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- Bootstrap core JavaScript -->
+  <script src="asset/bootstrap-5.2.3-dist/jquery/jquery.min.js"></script>
+    <script>
+      // Ambil tombolnya
+      const btn = document.getElementById("btnBackToTop");
+
+      // Tampilkan tombol jika scroll lebih dari 200px
+      window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          btn.style.display = "block";
+        } else {
+          btn.style.display = "none";
+        }
+      };
+
+      // Scroll ke atas saat tombol diklik
+      btn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
+
+   <!-- === SCRIPT DATA 50 OBAT + PAGINATION + FILTER === -->
+<script>
+// Data 50 obat — setiap item: nama, kode, kategori, link (AloDokter), img
+const obatData = [
+  { nama:"Paracetamol", kode:"OB001", kategori:"antinyeri", link:"https://www.alodokter.com/paracetamol",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1596469185/attached_image/paracetamol-alodokter.jpg" },
+  { nama:"Amoxicillin", kode:"OB002", kategori:"antibiotik", link:"https://www.alodokter.com/amoxicillin",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250868/attached_image/amoxicillin-alodokter.jpg" },
+  { nama:"Metformin", kode:"OB003", kategori:"metabolik", link:"https://www.alodokter.com/metformin",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250868/attached_image/diabetes-melitus-alodokter.jpg" },
+  { nama:"Ibuprofen", kode:"OB004", kategori:"antinyeri", link:"https://www.alodokter.com/ibuprofen",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250855/attached_image/ibuprofen-alodokter.jpg" },
+  { nama:"Omeprazole", kode:"OB005", kategori:"pencernaan", link:"https://www.alodokter.com/omeprazole",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250869/attached_image/omeprazole-alodokter.jpg" },
+  { nama:"Aspirin", kode:"OB006", kategori:"antinyeri", link:"https://www.alodokter.com/aspirin",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250857/attached_image/aspirin-alodokter.jpg" },
+  { nama:"Azithromycin", kode:"OB007", kategori:"antibiotik", link:"https://www.alodokter.com/azithromycin",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250856/attached_image/azithromycin-alodokter.jpg" },
+  { nama:"Ciprofloxacin", kode:"OB008", kategori:"antibiotik", link:"https://www.alodokter.com/ciprofloxacin",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250854/attached_image/ciprofloxacin-alodokter.jpg" },
+  { nama:"Cetirizine", kode:"OB009", kategori:"antialergi", link:"https://www.alodokter.com/cetirizine",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250851/attached_image/cetirizine-alodokter.jpg" },
+  { nama:"Loratadine", kode:"OB010", kategori:"antialergi", link:"https://www.alodokter.com/loratadine",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250852/attached_image/loratadine-alodokter.jpg" },
+
+  { nama:"Salbutamol (Ventolin)", kode:"OB011", kategori:"pernapasan", link:"https://www.alodokter.com/salbutamol",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250859/attached_image/salbutamol-alodokter.jpg" },
+  { nama:"Atorvastatin", kode:"OB012", kategori:"jantung", link:"https://www.alodokter.com/atorvastatin",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250856/attached_image/atorvastatin-alodokter.jpg" },
+  { nama:"Simvastatin", kode:"OB013", kategori:"jantung", link:"https://www.alodokter.com/simvastatin",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250856/attached_image/simvastatin-alodokter.jpg" },
+  { nama:"Lisinopril", kode:"OB014", kategori:"jantung", link:"https://www.alodokter.com/lisinopril",
+    img:"https://via.placeholder.com/100x60?text=Lisinopril" },
+  { nama:"Losartan", kode:"OB015", kategori:"jantung", link:"https://www.alodokter.com/losartan",
+    img:"https://via.placeholder.com/100x60?text=Losartan" },
+  { nama:"Clopidogrel", kode:"OB016", kategori:"jantung", link:"https://www.alodokter.com/clopidogrel",
+    img:"https://via.placeholder.com/100x60?text=Clopidogrel" },
+  { nama:"Warfarin", kode:"OB017", kategori:"jantung", link:"https://www.alodokter.com/warfarin",
+    img:"https://via.placeholder.com/100x60?text=Warfarin" },
+  { nama:"Insulin", kode:"OB018", kategori:"metabolik", link:"https://www.alodokter.com/insulin",
+    img:"https://via.placeholder.com/100x60?text=Insulin" },
+  { nama:"Prednisone", kode:"OB019", kategori:"lainnya", link:"https://www.alodokter.com/prednisone",
+    img:"https://via.placeholder.com/100x60?text=Prednisone" },
+  { nama:"Dexamethasone", kode:"OB020", kategori:"lainnya", link:"https://www.alodokter.com/dexamethasone",
+    img:"https://via.placeholder.com/100x60?text=Dexamethasone" },
+
+  { nama:"Fluconazole", kode:"OB021", kategori:"antifungal", link:"https://www.alodokter.com/fluconazole",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250857/attached_image/fluconazole-alodokter.jpg" },
+  { nama:"Metronidazole", kode:"OB022", kategori:"antibiotik", link:"https://www.alodokter.com/metronidazole",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250858/attached_image/metronidazole-alodokter.jpg" },
+  { nama:"Famotidine", kode:"OB023", kategori:"pencernaan", link:"https://www.alodokter.com/famotidine",
+    img:"https://via.placeholder.com/100x60?text=Famotidine" },
+  { nama:"Doxicillin (Doxycycline)", kode:"OB024", kategori:"antibiotik", link:"https://www.alodokter.com/doxycycline",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250856/attached_image/doxycycline-alodokter.jpg" },
+  { nama:"Levothyroxine", kode:"OB025", kategori:"lainnya", link:"https://www.alodokter.com/levothyroxine",
+    img:"https://via.placeholder.com/100x60?text=Levothyroxine" },
+  { nama:"Sertraline", kode:"OB026", kategori:"saraf", link:"https://www.alodokter.com/sertraline",
+    img:"https://via.placeholder.com/100x60?text=Sertraline" },
+  { nama:"Diazepam", kode:"OB027", kategori:"saraf", link:"https://www.alodokter.com/diazepam",
+    img:"https://via.placeholder.com/100x60?text=Diazepam" },
+  { nama:"Amlodipine", kode:"OB028", kategori:"jantung", link:"https://www.alodokter.com/amlodipine",
+    img:"https://via.placeholder.com/100x60?text=Amlodipine" },
+  { nama:"Nifedipine", kode:"OB029", kategori:"jantung", link:"https://www.alodokter.com/nifedipine",
+    img:"https://via.placeholder.com/100x60?text=Nifedipine" },
+  { nama:"Furosemide", kode:"OB030", kategori:"jantung", link:"https://www.alodokter.com/furosemide",
+    img:"https://via.placeholder.com/100x60?text=Furosemide" },
+
+  { nama:"Spironolactone", kode:"OB031", kategori:"jantung", link:"https://www.alodokter.com/spironolactone",
+    img:"https://via.placeholder.com/100x60?text=Spironolactone" },
+  { nama:"Vitamin C (Ascorbic Acid)", kode:"OB032", kategori:"vitamin", link:"https://www.alodokter.com/vitamin-c",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250851/attached_image/vitamin-c-alodokter.jpg" },
+  { nama:"Multivitamin", kode:"OB033", kategori:"vitamin", link:"https://www.alodokter.com/multivitamin",
+    img:"https://via.placeholder.com/100x60?text=Multivitamin" },
+  { nama:"Calcium (Kalsium)", kode:"OB034", kategori:"vitamin", link:"https://www.alodokter.com/kalsium",
+    img:"https://via.placeholder.com/100x60?text=Calcium" },
+  { nama:"Ferrous Sulfate (Zat Besi)", kode:"OB035", kategori:"vitamin", link:"https://www.alodokter.com/ferrous-sulfate",
+    img:"https://via.placeholder.com/100x60?text=Iron" },
+  { nama:"Dextromethorphan", kode:"OB036", kategori:"pernapasan", link:"https://www.alodokter.com/dextromethorphan",
+    img:"https://via.placeholder.com/100x60?text=Dextromethorphan" },
+  { nama:"Oseltamivir", kode:"OB037", kategori:"antivirus", link:"https://www.alodokter.com/oseltamivir",
+    img:"https://via.placeholder.com/100x60?text=Oseltamivir" },
+  { nama:"Ketoconazole", kode:"OB038", kategori:"kulit", link:"https://www.alodokter.com/ketoconazole",
+    img:"https://via.placeholder.com/100x60?text=Ketoconazole" },
+  { nama:"Benzoyl Peroxide", kode:"OB039", kategori:"kulit", link:"https://www.alodokter.com/benzoyl-peroxide",
+    img:"https://via.placeholder.com/100x60?text=Benzoyl+Peroxide" },
+  { nama:"Hydrocortisone (salep)", kode:"OB040", kategori:"kulit", link:"https://www.alodokter.com/hydrocortisone",
+    img:"https://via.placeholder.com/100x60?text=Hydrocortisone" },
+
+  { nama:"Salicylic Acid", kode:"OB041", kategori:"kulit", link:"https://www.alodokter.com/salicylic-acid",
+    img:"https://via.placeholder.com/100x60?text=Salicylic" },
+  { nama:"Dextrose 5% (infus)", kode:"OB042", kategori:"lainnya", link:"https://www.alodokter.com/dextrose",
+    img:"https://via.placeholder.com/100x60?text=D5W" },
+  { nama:"Mupirocin", kode:"OB043", kategori:"kulit", link:"https://www.alodokter.com/mupirocin",
+    img:"https://via.placeholder.com/100x60?text=Mupirocin" },
+  { nama:"Nitrofurantoin", kode:"OB044", kategori:"antibiotik", link:"https://www.alodokter.com/nitrofurantoin",
+    img:"https://via.placeholder.com/100x60?text=Nitrofurantoin" },
+  { nama:"Gabapentin", kode:"OB045", kategori:"saraf", link:"https://www.alodokter.com/gabapentin",
+    img:"https://via.placeholder.com/100x60?text=Gabapentin" },
+  { nama:"Pregabalin", kode:"OB046", kategori:"saraf", link:"https://www.alodokter.com/pregabalin",
+    img:"https://via.placeholder.com/100x60?text=Pregabalin" },
+  { nama:"Ranitidine", kode:"OB047", kategori:"pencernaan", link:"https://www.alodokter.com/ranitidine",
+    img:"https://via.placeholder.com/100x60?text=Ranitidine" },
+  { nama:"Pantoprazole", kode:"OB048", kategori:"pencernaan", link:"https://www.alodokter.com/pantoprazole",
+    img:"https://via.placeholder.com/100x60?text=Pantoprazole" },
+  { nama:"Clarithromycin", kode:"OB049", kategori:"antibiotik", link:"https://www.alodokter.com/clarithromycin",
+    img:"https://via.placeholder.com/100x60?text=Clarithromycin" },
+  { nama:"Doxycycline (lagi)", kode:"OB050", kategori:"antibiotik", link:"https://www.alodokter.com/doxycycline",
+    img:"https://res.cloudinary.com/dk0z4ums3/image/upload/v1513250856/attached_image/doxycycline-alodokter.jpg" }
+];
+
+// Pagination & filter logic
+let currentPage = 1;
+const itemsPerPage = 10;
+
+function renderTable() {
+  const tbody = document.getElementById("tabelObat");
+  tbody.innerHTML = "";
+
+  const kategori = document.getElementById("filterKategori").value;
+  const q = document.getElementById("searchInput").value.trim().toLowerCase();
+
+  const filtered = obatData.filter(o => {
+    const matchKategori = (kategori === "all") || (o.kategori === kategori);
+    const matchQuery = o.nama.toLowerCase().includes(q) || o.kode.toLowerCase().includes(q);
+    return matchKategori && matchQuery;
+  });
+
+  const total = filtered.length;
+  const pages = Math.max(1, Math.ceil(total / itemsPerPage));
+  if (currentPage > pages) currentPage = pages;
+
+  const start = (currentPage - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageItems = filtered.slice(start, end);
+
+  pageItems.forEach((o, idx) => {
+    const no = start + idx + 1;
+    tbody.insertAdjacentHTML("beforeend", `
+      <tr>
+        <td>${no}</td>
+        <td>${o.nama}</td>
+        <td class="text-center"><img src="${o.img}" width="100" height="60" onerror="this.src='https://via.placeholder.com/100x60?text=No+Image'"></td>
+        <td>${o.kode}</td>
+        <td class="text-center">
+          <a class="btn btn-outline-success" href="${o.link}" target="_blank" rel="noopener">Detail</a>
+        </td>
+      </tr>
+    `);
+  });
+
+  renderPagination(total);
+}
+
+function renderPagination(totalItems) {
+  const pages = Math.max(1, Math.ceil(totalItems / itemsPerPage));
+  const pager = document.getElementById("pagination");
+  pager.innerHTML = "";
+
+  // Prev
+  pager.insertAdjacentHTML("beforeend", `
+    <li class="page-item ${currentPage === 1 ? 'disabled' : ''}">
+      <button class="page-link" ${currentPage===1?'disabled':''} onclick="changePage(${currentPage-1})">Prev</button>
+    </li>`);
+
+  // Pages (show up to 7 page buttons with ellipsis)
+  const maxButtons = 7;
+  let startPage = Math.max(1, currentPage - 3);
+  let endPage = Math.min(pages, startPage + maxButtons - 1);
+  if (endPage - startPage < maxButtons - 1) {
+    startPage = Math.max(1, endPage - maxButtons + 1);
+  }
+
+  if (startPage > 1) {
+    pager.insertAdjacentHTML("beforeend", `<li class="page-item"><button class="page-link" onclick="changePage(1)">1</button></li>`);
+    if (startPage > 2) {
+      pager.insertAdjacentHTML("beforeend", `<li class="page-item disabled"><span class="page-link">…</span></li>`);
+    }
+  }
+
+  for (let i = startPage; i <= endPage; i++) {
+    pager.insertAdjacentHTML("beforeend", `
+      <li class="page-item ${i===currentPage ? 'active' : ''}">
+        <button class="page-link" onclick="changePage(${i})">${i}</button>
+      </li>`);
+  }
+
+  if (endPage < pages) {
+    if (endPage < pages - 1) {
+      pager.insertAdjacentHTML("beforeend", `<li class="page-item disabled"><span class="page-link">…</span></li>`);
+    }
+    pager.insertAdjacentHTML("beforeend", `<li class="page-item"><button class="page-link" onclick="changePage(${pages})">${pages}</button></li>`);
+  }
+
+  // Next
+  pager.insertAdjacentHTML("beforeend", `
+    <li class="page-item ${currentPage === pages ? 'disabled' : ''}">
+      <button class="page-link" ${currentPage===pages?'disabled':''} onclick="changePage(${currentPage+1})">Next</button>
+    </li>`);
+}
+
+function changePage(page) {
+  const total = obatData.filter(o => {
+    const kategori = document.getElementById("filterKategori").value;
+    const q = document.getElementById("searchInput").value.trim().toLowerCase();
+    return ((kategori === "all") || (o.kategori === kategori)) &&
+           (o.nama.toLowerCase().includes(q) || o.kode.toLowerCase().includes(q));
+  }).length;
+  const pages = Math.max(1, Math.ceil(total / itemsPerPage));
+  if (page < 1) page = 1;
+  if (page > pages) page = pages;
+  currentPage = page;
+  renderTable();
+}
+
+// Events
+document.getElementById("filterKategori").addEventListener("change", () => { currentPage = 1; renderTable(); });
+document.getElementById("searchInput").addEventListener("input", () => { currentPage = 1; renderTable(); });
+
+// Initial render
+renderTable();
+</script>
+
+  </body>
+</html>
